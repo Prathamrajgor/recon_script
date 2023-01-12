@@ -4,7 +4,7 @@ echo "[+] \n This script might take some time to run. "
 mkdir subdomains
 echo "[+] \n Enumerating Subdomains for $1\n"
 cd subdomains
-echo "Enumerating using Amass, Subfinder, Findomain and Knockpy"
+echo "Enumerating using  Assetfinder, Subfinder, Findomain and Knockpy"
 touch subdomains.txt
 (subfinder -d $1 | tee -a subdomains.txt) & (assetfinder $1 | tee -a subdomains.txt) & (findomain -t $1 -u findomain.txt) & wait
 mkdir knock
